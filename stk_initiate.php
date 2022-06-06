@@ -101,7 +101,7 @@ if(isset($_POST['submit'])){
     $stkpushed = $result->{'ResponseCode'};
     if($stkpushed === "0"){
       echo $result->{'ResponseDescription'};
-      header("Location: /confirmation-payment.php");
+      
     } else{
         echo $result->{'errorMessage'};
     }
