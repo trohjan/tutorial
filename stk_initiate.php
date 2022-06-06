@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
   # callback url
-  $CallBackURL = 'https://172.16.9.139/tutorial/callback_url.php';  
+  $CallBackURL = 'https://lit-river-22179.herokuapp.com/callback_url.php';  
 
 
 
@@ -101,7 +101,7 @@ if(isset($_POST['submit'])){
     $stkpushed = $result->{'ResponseCode'};
     if($stkpushed === "0"){
       echo $result->{'ResponseDescription'};
-      header("Location: tutorial/confirmation-payment.php");
+      header("Location: /confirmation-payment.php");
     } else{
         echo $result->{'errorMessage'};
     }
